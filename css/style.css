@@ -33,7 +33,7 @@ h4 {
 	font-size: 20px;
 }
 h5 {
-	font-size: 16px;
+	font-size: 18px;
 	font-family: 'Caveat', cursive;
 }
 h1, h2 {
@@ -52,8 +52,8 @@ p {
 	font-size: 22px;
 }
 .content-wrap {
-	width: 95%;
-    padding: 30px 0;
+	width: 90%;
+  padding: 30px 0;
 	overflow: auto;
 	margin: 0 auto;
 }
@@ -72,7 +72,6 @@ ul {
 
 @media (min-width: 769px) {	
 	.content-wrap{
-		width: 90%;
 		padding: 60px 0;
 	}
 	h1 {
@@ -170,13 +169,26 @@ nav li {
 	nav li {
 		display: inline-block;
 		width: 24%;
-	    padding: 10px 0;
-	    border-right: 2px solid #fff;
-	    border-bottom: none;
-	    font-size: 20px;
-	}	
+		padding: 10px 0;
+		border-right: 2px solid #fff;
+		border-bottom: none;
+		font-size: 20px;
+	}		
+	nav li:first-child {
+		width: 25%;
+		float: left;
+	}		
+	nav li:nth-child(2) {
+		width: 25%;
+		float: left;
+	}		
+	nav li:nth-child(3) {
+		width: 25%;
+		float: left;
+	}
 	nav li:last-child {
 	    border-right: none;	
+			width: 25%;
 	}
 	nav li:hover{
 		background-color: #ffe066;
@@ -203,9 +215,12 @@ nav li {
 	display: block;
 	margin-bottom: 25px;
 }
+.intro-desc ul {
+	margin-right: 15px;
+}
 @media (min-width: 769px) {
 	.intro img {
-		margin-left: 20px;
+		margin-left: 50px;
 		float: right;
 		margin-bottom: 0;
 	}
@@ -232,112 +247,55 @@ nav li {
 .we-heading h3 {
 	margin-bottom: 0;
 }
+.we-content {
+	border-bottom: 1px solid #2f3061;
+  padding-bottom: 20px;
+}
+.we-content:last-child {
+	border-bottom: none;
+}
 @media (min-width: 769px) {	
 	.work-exp h2 {
 		display: inline-block;
-	    padding-right: 10px;
-	    padding-left: 2px;
+		padding-right: 10px;
+		padding-left: 2px;
 	}
 	.work-exp h5 {
 		float: right;
 	    margin-right: 3px;
 	}
 	.we-content {
-		padding-right: none;
+		padding-right: 0;
 	}
 }
 /* =========== Skills Section =========== */
 
-.skills-content {
-	margin-top: 35px;
-}
-
 .skills h2 {
 	background-color: #ffe066;
 	text-align: center;
+	margin-bottom: 35px;
 }
-.skills-circle {
-  width: 100%;
+.sc-content li {
+	list-style-type: none;
 }
-.skills-circle h3 {
-	font-size: 20px;
-	text-align: center;
+.sc-content ul {
+	margin-top: 0;
 }
-.circle-wrap {
-  margin: 10px auto;
-  width: 150px;
-  height: 150px;
-  background: #fefcff;
-  border-radius: 50%;
+.skills-content{
+	overflow: auto;
+	padding-bottom: 20px;
+	margin-bottom: 15px;
+  border-bottom: 1px solid #2f3061;
 }
-.circle-wrap .circle .mask,
-.circle-wrap .circle .fill {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  border-radius: 50%;
+.skills-content:last-child{
+	border-bottom: none;
 }
-.circle-wrap .inside-circle {
-  width: 122px;
-  height: 122px;
-  border-radius: 50%;
-  background: #fff;
-  line-height: 120px;
-  text-align: center;
-  margin-top: 14px;
-  margin-left: 14px;
-  position: absolute;
-  z-index: 100;
-  font-weight: 700;
-  font-size: 2em;
-}
-
-.mask .fill {
-  clip: rect(0px, 100px, 150px, 0px);
-  background-color: #2F3061;    
-}
-.circle-wrap .circle .mask {
-  clip: rect(0px, 150px, 150px, 75px);
-}
-.html .mask.full,
-.circle .fill {
-  animation: fill ease-in-out 10s;
-  transform: rotate(135deg);
-}
-.node-js .mask.full,
-.circle .fill {
-  transform: rotate(50deg);
-}
-.javascript .mask.full,
-.circle .fill {
-  transform: rotate(135deg);
-}
-.wordpress .mask.full,
-.circle .fill {
-  transform: rotate(165deg);
-}
-.php .mask.full,
-.circle .fill {
-  transform: rotate(150deg);
-}
-.react-vue .mask.full,
-.circle .fill {
-  transform: rotate(90deg);
-}
-.photoshop .mask.full,
-.circle .fill {
-  transform: rotate(25deg);
-}
-.hubspot .mask.full,
-.circle .fill {
-  transform: rotate(160deg);
-}
-
-@media (min-width: 640px) {
-	.skills-circle {
-	  display: inline-block;
-	  width: 49%;
-	}
+.sc-content ul {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 0;
 }
 @media (min-width: 769px) {
 	.skills h2 {
@@ -345,14 +303,14 @@ nav li {
 	    padding-right: 10px;
 	    padding-left: 2px;
 	}
-	.skills-content {
-	margin-top: 10px;
+	.sc-heading {
+		float: left;
+		width: 30%;
 	}
-}
-
-@media (min-width: 1080px) {
-	.skills-circle {
-	  width: 23%;
+	.sc-content {
+	    float: right;
+	    width: 65%;
+	    margin-right: 0;
 	}
 }
 
@@ -369,9 +327,9 @@ nav li {
 	background-color: #2F3061;
 	border-radius: 4px;
 	display: inline-block;
-	float: right;
 	font-weight: bold;
 	text-align: center;
+	margin-left: 25px;
 }
 .projects .btn:hover {
 	background-color: rgba(47, 48, 97, 0.8);
@@ -379,6 +337,11 @@ nav li {
 .project-item {
     overflow: auto;
     margin: 25px 10px;
+		border-bottom: 1px solid #2f3061;
+		padding-bottom: 20px;
+}
+.project-item:last-child {
+	border-bottom: none;
 }
 .projects h2 {
 	background-color: #fff;
@@ -396,6 +359,10 @@ nav li {
 .pi-content {
 	margin-right: 15px;
 }
+.pi-heading a {
+	color: #2F3061;
+}
+	
 @media (min-width: 769px) {
 	.projects h2 {
 		display: inline-block;
@@ -403,8 +370,8 @@ nav li {
 	    padding-left: 2px;
 	}
 	.project-item {
-	    padding: 25px;
-   		margin: 25px 0;
+		padding: 25px 25px 45px 25px;
+    margin: 25px 0;
 	}
 	.pi-heading {
 		float: left;
@@ -414,6 +381,9 @@ nav li {
 	    float: right;
 	    width: 65%;
 	    margin-right: 0;
+	}	
+	.projects .btn {
+		float: right;
 	}
 }
 
@@ -433,8 +403,15 @@ nav li {
 .ec-heading h3 {
 	margin-bottom: 0;
 }
-.ec-content p {
+.ec-desc p {
 	margin-top: 3px;
+}
+.ec-content {
+	border-bottom: 1px solid #2F3061;
+	padding-bottom: 10px;
+}
+.ec-content:last-child{
+	border-bottom: none;
 }
 @media (min-width: 769px) {
 	.education-and-cert {
